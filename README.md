@@ -16,6 +16,7 @@ It allows a user to upload receipts from different supermarkets and uses an OCR 
 ### Note
 This is still a work in progress and as of now is more of a prrof of concept. The partner names are currently set to "A" and "O", that will probably change in the future as I implement user account.
 
+---
 First you upload your receipts:
 
 Then you wait for the progressbar
@@ -41,6 +42,7 @@ After that you will be automatically redirected to the prices table.
 ### Note
 Note that you cannot currently try this to its full functionality unless you have a veryfi account with an active api key and credentials
 
+---
 1. Clone the repository
 2. Edit the `api_keys.py` file and add in your api keys from [the veryfi website](https://app.veryfi.com/api/settings/keys/)
 3. Launch `app.py` and wait for an address you can visit. []
