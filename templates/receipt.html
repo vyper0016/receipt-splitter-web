@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Receipt Visualizer</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/receipt.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <table>
+
+        <tr class="headers">
+            <th style="width: 17%;">Receipt</th>
+            <th style="width: 80px;">qt</th>
+            <th style="width: fit-content;">Desctiption</th>
+            <th style="width: 10%;">Price €</th>
+            <th style="width: fit-content;">For</th>
+        </tr>
+        {% for receipt in receipts %}
+            <tr>
+                <td class="market" rowspan="{{receipt['items']|length}}">
+                    <p class="receipt nr"># {{receipt['nr']}}</p>
+                    <p class="receipt date">{{receipt['date']}}</p>
+                    <p class="receipt market_name">{{receipt['market']}}</p>
+                    <p class="receipt market_address">{{receipt['address']}}</p>
+                    <img class="receipt logo" src="{{receipt['logo_url']}}" alt="">
+                    <fieldset class="paid_by">
+                        <input type="radio" name="paid{{receipt['nr']}}" value="a" checked/>
+                        <label for="choice1">A</label>
+                        <input type="radio" name="paid{{receipt['nr']}}" value="o" />
+                        <label for="choice2">O</label>
+                    </fieldset>
+                    <a href="{{receipt['url']}} " target="_blank">
+                        <div class="image-container">
+                            <img id="zoom-image" class="receipt url" src="{{receipt['url']}}" alt="">
+                        </div>
+                    </a>
+                </td>
+            {% for item in receipt['items'] %}
+                <td class="item"><input class="item" type="number" id="quantity{{item['id']}}" min="0" max="99" step="1" value="{{item['quantity']}}"></td>
+                <td class="item">{{item['description']}}</td>
+                <td class="item"><input class="item" type="number" id="price{{item['id']}}" min="0.01" max="999" step="0.01" value="{{item['price']}}">
+                    <span id="item_total_price{{item['id']}}" class="item item_total_price"> 0
+                </span></td>
+                <td class="item">    
+                    <fieldset class="product_for">
+                        <input type="radio" name="for{{item['id']}}" value="a" checked/>
+                        <label for="choice1">A</label>
+                        <input type="radio" name="for{{item['id']}}" value="o" />
+                        <label for="choice2">O</label>
+                        <input type="radio" name="for{{item['id']}}" value="b" />
+                        <label for="choice3">B</label>
+                    </fieldset>
+                </td>         
+                </tr>
+            {% endfor %}
+            <tr class="sub-total">
+                <td class="total_text" colspan="3">Sub-Total</td>
+                <td class="total_num" id="subtotal{{receipt['nr']}}">0</td>
+            </tr>
+        {% endfor %}
+        <tr class="total">
+            <td class="total_text" colspan="4">Total paid by A</td>
+            <td class="total_num" id="total_a">10</td>
+        </tr>
+        <tr class="total">
+            <td class="total_text" colspan="4">Total paid by O</td>
+            <td class="total_num" id="total_o">10</td>
+        </tr>
+        <tr class="total">
+            <td class="resolution total_text">Resolution</td>
+            <td class="total_text" colspan="3" id="resolution">A pays O</td>  
+            <td class="total_num" id="total_resolution">10</td>          
+        </tr>
+    </table>
+
+    <script
+        type="text/javascript"
+        src="{{ url_for('static', filename='receipt.js')}}"
+    ></script>
+    <script type="text/javascript">
+        
+        document.querySelectorAll('input').forEach(item => {
+
+            item.addEventListener('change', event => {
+                calculate({{ receipts|length }}, {{ items|tojson }})            })        })
+        calculate({{ receipts|length }}, {{ items|tojson }});
+    </script>
+
+</body>
+</html>

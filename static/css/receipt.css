@@ -1,0 +1,121 @@
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(255, 255, 255);
+  }
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover .item{
+    background-color: rgb(219, 219, 219);
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.items-table {
+    margin-bottom: 10px;
+}
+
+tfoot td {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.product_for, .paid_by {
+    border: none;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.url {
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+}
+
+
+td{
+    text-align: center;
+}
+
+.total_text{
+    text-align: right;
+}
+
+.headers{
+    height: 60px !important;
+}
+
+.headers th{
+    text-align: center;
+}
+
+tr{
+    height: 50px;
+}
+
+input{
+    text-align: center;
+    font-size: 15px;
+    border: none;
+}
+
+input:hover{
+    border: 1px solid black;
+}
+
+.market{
+    background-color: #dbdada;
+    text-align: start;
+    vertical-align: top;
+    border-top: solid 2px white;
+}
+
+.market_address{
+    font-size: 10px;
+}
+
+.total{
+    height: 80px;
+    background-color: rgb(211, 211, 211);
+    border-bottom: solid 2px white;
+}
+
+.image-container {
+    position: relative;
+    width: 100%; /* Adjust according to your needs */
+    height: 50%; /* Adjust according to your needs */
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container:hover img {
+    transform: scale(1.7); /* Adjust the scale factor as desired */
+  }
+
+  .item_total_price {
+
+    font-size: 10; 
+  }

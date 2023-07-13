@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <script src="https://cdn.socket.io/4.5.3/socket.io.min.js"
+    integrity="sha384-WPFUvHkB1aHA5TDSZi6xtDgkF0wXJcIIxXhC6h8OT8EH3fC5PWro5pWJ1THjcfEi"
+    crossorigin="anonymous"></script>
+    <script
+    type="text/javascript"
+    src="{{ url_for('static', filename='main.js')}}"
+  ></script>
+    
+    <title>matt</title>
+  {{ dropzone.load_css() }}
+  <style>
+    .dropzone {
+        display: flex;
+        border: 2px solid #8a8a8a;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #ffffff;
+    }
+    .dz-message {
+    color: #000000;
+    font-size: 18px;
+    }
+    .dropzone:hover{
+    border-color: #ffffff;
+    background-color: #000000;
+    }
+    .dropzone:hover .dz-message{
+        color: #ffffff;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="centered">
+    <h1>Start by uploading your receipts!</h1>
+    {{ dropzone.create(action=url_for('upload')) }}
+  
+    <div id="progress">
+      <div id="bar"></div>
+    </div>
+    <div id="scan"></div>
+    <button id="button" >Next</button>
+  </div>
+  {{ dropzone.load_js() }}
+  {{ dropzone.config() }}
+
+
+
+<script type="text/javascript">
+  const receipt_url = {{ receipt_url|tojson }};
+  const root_url = {{root_url|tojson}};
+</script>
+  
+</body>
+</html>
