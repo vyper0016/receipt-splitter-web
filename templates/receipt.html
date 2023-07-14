@@ -11,6 +11,7 @@
         <tr class="headers">
             <th style="width: 17%;">Receipt</th>
             <th style="width: 80px;">qt</th>
+            <th style="width: 10%;">Unit €</th>
             <th style="width: fit-content;">Desctiption</th>
             <th style="width: 10%;">Price €</th>
             <th style="width: fit-content;">For</th>
@@ -24,6 +25,7 @@
                     <p class="receipt market_address">{{receipt['address']}}</p>
                     <img class="receipt logo" src="{{receipt['logo_url']}}" alt="">
                     <fieldset class="paid_by">
+                        <br class="receipt">Paid by:</br>
                         <input type="radio" name="paid{{receipt['nr']}}" value="a" checked/>
                         <label for="choice1">A</label>
                         <input type="radio" name="paid{{receipt['nr']}}" value="o" />
@@ -37,9 +39,9 @@
                 </td>
             {% for item in receipt['items'] %}
                 <td class="item"><input class="item" type="number" id="quantity{{item['id']}}" min="0" max="99" step="1" value="{{item['quantity']}}"></td>
+                <td class="item"><input class="item" type="number" id="price{{item['id']}}" min="0.01" max="999" step="0.01" value="{{item['price']}}"></td>
                 <td class="item">{{item['description']}}</td>
-                <td class="item"><input class="item" type="number" id="price{{item['id']}}" min="0.01" max="999" step="0.01" value="{{item['price']}}">
-                    <span id="item_total_price{{item['id']}}" class="item item_total_price"> 0
+                <td class="item"><span id="item_total_price{{item['id']}}" class="item item_total_price"> 0
                 </span></td>
                 <td class="item">    
                     <fieldset class="product_for">
@@ -54,21 +56,21 @@
                 </tr>
             {% endfor %}
             <tr class="sub-total">
-                <td class="total_text" colspan="3">Sub-Total</td>
+                <td class="total_text" colspan="4">Sub-Total</td>
                 <td class="total_num" id="subtotal{{receipt['nr']}}">0</td>
             </tr>
         {% endfor %}
         <tr class="total">
-            <td class="total_text" colspan="4">Total paid by A</td>
+            <td class="total_text" colspan="5">Total paid by A</td>
             <td class="total_num" id="total_a">10</td>
         </tr>
         <tr class="total">
-            <td class="total_text" colspan="4">Total paid by O</td>
+            <td class="total_text" colspan="5">Total paid by O</td>
             <td class="total_num" id="total_o">10</td>
         </tr>
         <tr class="total">
             <td class="resolution total_text">Resolution</td>
-            <td class="total_text" colspan="3" id="resolution">A pays O</td>  
+            <td class="total_text" colspan="4" id="resolution">A pays O</td>  
             <td class="total_num" id="total_resolution">10</td>          
         </tr>
     </table>
