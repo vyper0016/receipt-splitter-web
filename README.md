@@ -1,7 +1,7 @@
 # Receipt splitter
 
 ## Description
-This is my first try making a web app. It is a very simple app that allows partners to split grocery bills.
+This is my first try making a web app. It is a very simple app that allows partners to split grocery bills.<br>
 Built using Flask. Currently only tested on windows, using python 3.11
 ### How it works
 It allows a user to upload receipts from different supermarkets and uses an OCR API (currently using an unlicensed version of veryfi) to read data from it and return it in a table and tells the user who should pay who and how much.
@@ -60,10 +60,11 @@ Note that you cannot currently try this to its full functionality unless you hav
 
    
 5. If you want to make it visible for other devices in the network, edit the last line of the `app.py` file and add `host='0.0.0.0'` in the app.run arguments
-   make sure to disable debugging if you're not on a trusted network.
-   It should now look like this:
+   make sure to disable debugging if you're not on a trusted network. <br>
+   It should now look like this:<br>
    `app.run(host='0.0.0.0')`
-   Note that the website is currently not optimized for phones but will function normally anyways, even if it looks a bit janky.
+   <br>
+   - Note that the website is currently not optimized for phones but will function normally anyways, even if it looks a bit janky.
 
 ## Future Improvements
 As mentioned above this is a proof of concept and my first shot at web based development in general, if i decide to improve on this I'd like to implement the following features:
