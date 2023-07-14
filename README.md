@@ -19,16 +19,16 @@ This is still a work in progress and as of now is more of a prrof of concept. Th
 ---
 - First you upload your receipts:
 
-![Opera Snapshot_2023-07-14_014412_127 0 0 1](https://github.com/vyper0016/receipt-splitter-web/assets/81050283/224a08e0-af24-4f98-9827-c4356eb7c11d)
-![Opera Snapshot_2023-07-14_014454_127 0 0 1](https://github.com/vyper0016/receipt-splitter-web/assets/81050283/66ac3021-addd-4367-b37e-d6d00044cd81)
+![Opera Snapshot_2023-07-14_014412_127 0 0 1](https://github.com/vyper0016/receipt-splitter-web/assets/81050283/813e6ff6-19ce-4bba-a1bb-2785a9563a50)
+![Opera Snapshot_2023-07-14_014454_127 0 0 1](https://github.com/vyper0016/receipt-splitter-web/assets/81050283/84909451-60a7-426d-8d3b-20a2f3e349d2)
 
 - Then you wait for the progressbar
 
-![Opera Snapshot_2023-07-14_014519_127 0 0 1](https://github.com/vyper0016/receipt-splitter-web/assets/81050283/3a23285c-82fb-42ee-82cc-3c1833569603)
+![Opera Snapshot_2023-07-14_014519_127 0 0 1](https://github.com/vyper0016/receipt-splitter-web/assets/81050283/1c8b6b2d-a6a5-4fe5-893a-6e4250c4369a)
 
 - After that you will be automatically redirected to the prices table.
 
-![Opera Snapshot_2023-07-14_015721_127 0 0 1](https://github.com/vyper0016/receipt-splitter-web/assets/81050283/5ea965ac-0117-4178-bce7-0d4e8dba0085)
+![Opera Snapshot_2023-07-14_014703_127 0 0 1](https://github.com/vyper0016/receipt-splitter-web/assets/81050283/a1afcd7c-5a36-4384-bac0-1666b098a976)
 
 ---
 
@@ -56,7 +56,7 @@ Note that you cannot currently try this to its full functionality unless you hav
 2. Edit the `api_keys.py` file and add in your api keys from [the veryfi website](https://app.veryfi.com/api/settings/keys/)
 3. Launch `app.py` and wait for an address you can visit.
    
-   ![Capture](https://github.com/vyper0016/receipt-splitter-web/assets/81050283/d1cc1a92-4251-4f98-8175-7cf204b30d23)
+   ![Capture](https://github.com/vyper0016/receipt-splitter-web/assets/81050283/e99c9ee3-630e-4ab3-bddb-6532dbbf9936)
 
    
 5. If you want to make it visible for other devices in the network, edit the last line of the `app.py` file and add `host='0.0.0.0'` in the app.run arguments
