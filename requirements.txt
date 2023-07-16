@@ -1,0 +1,4 @@
+flask
+flask-Dropzone
+flask-SocketIO
+werkzeug
