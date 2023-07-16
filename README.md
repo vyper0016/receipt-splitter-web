@@ -54,13 +54,17 @@ Note that you cannot currently try this to its full functionality unless you hav
 
 ---
 1. Clone the repository
-2. Edit the `api_keys.py` file and add in your api keys from [the veryfi website](https://app.veryfi.com/api/settings/keys/)
-3. Launch `app.py` and wait for an address you can visit.
+2. Install the requirements from `requirements.txt` by executing the pip command:
+ ```
+pip install -r requirements.txt
+```
+4. Edit the `api_keys.py` file and add in your api keys from [the veryfi website](https://app.veryfi.com/api/settings/keys/)
+5. Launch `app.py` and wait for an address you can visit.
    
    ![Capture](https://github.com/vyper0016/receipt-splitter-web/assets/81050283/e99c9ee3-630e-4ab3-bddb-6532dbbf9936)
 
    
-5. If you want to make it visible for other devices in the network, edit the last line of the `app.py` file and add `host='0.0.0.0'` in the app.run arguments
+6. If you want to make it visible for other devices in the network, edit the last line of the `app.py` file and add `host='0.0.0.0'` in the app.run arguments
    make sure to disable debugging if you're not on a trusted network. <br>
    It should now look like this:<br>
    `app.run(host='0.0.0.0')`
