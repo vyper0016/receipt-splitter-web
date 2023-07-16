@@ -28,7 +28,8 @@ This is still a work in progress and as of now is more of a prrof of concept. Th
 
 - After that you will be automatically redirected to the prices table.
 
-![Opera Snapshot_2023-07-14_014703_127 0 0 1](https://github.com/vyper0016/receipt-splitter-web/assets/81050283/a1afcd7c-5a36-4384-bac0-1666b098a976)
+![253438614-50765a3b-cd8b-407d-979a-e3948e4fc3fc](https://github.com/vyper0016/receipt-splitter-web/assets/81050283/aa33bf82-eae3-4d9b-ac00-975eb929ab5d)
+
 
 ---
 
