@@ -1,5 +1,9 @@
 # Receipt splitter
 
+new project: [ritter](https://github.com/vyper0016/ritter)
+
+-- DEPRECATED --
+---
 ## Description
 This is my first try making a web app. It is a very simple app that allows partners to split grocery bills.<br>
 Built using Flask.
